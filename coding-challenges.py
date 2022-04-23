@@ -34,15 +34,18 @@ def update_intcodes(intcodes):
     # Initialize the opcode at the positon 0 index (start at 0)
     opcode = 0
     
-    # Do this at every fourth element of the list of intcodes starting at 0
-
     try: 
+
+        # Do this at every fourth element of the list of intcodes starting at 0
+
         for i in range(0, len(intcodes)-1, 4):
     
             # Get the value at the position 0 + 1 index
             num1_index = intcodes[opcode+1]
+
             # Get the value at the position 0 + 2 index
             num2_index = intcodes[opcode+2]
+
             # Get the index to update based on the value at the position 0 + 3 index
             update_index = intcodes[opcode+3]
     
@@ -70,6 +73,8 @@ def update_intcodes(intcodes):
                 
         # Return the updated list of intcodes 
         return intcodes
+
+    # Handle IndexErrors    
     except IndexError:
         return intcodes
 
