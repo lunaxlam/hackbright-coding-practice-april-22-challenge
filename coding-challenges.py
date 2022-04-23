@@ -1,9 +1,6 @@
 """Interstellar Intcode Program"""
 
 # Test cases
-from subprocess import CalledProcessError
-
-
 prompt_code = [1,9,10,3,2,3,11,0,99,30,40,50]
 short_code1 = [1,0,0,0,99]
 short_code2 = [2,3,0,3,99]
@@ -65,7 +62,6 @@ def update_intcodes(intcodes):
             # In all other cases, print error message
             else: 
                 print("Something went wrong. Invalid code.")
-    
                 
         # Return the updated list of intcodes 
         return intcodes
@@ -76,7 +72,6 @@ def update_intcodes(intcodes):
 
 
 # Call the test cases
-
 print(update_intcodes(prompt_code))
 print(update_intcodes(short_code1))
 print(update_intcodes(short_code2))
