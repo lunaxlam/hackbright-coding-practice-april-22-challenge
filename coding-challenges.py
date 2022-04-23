@@ -16,11 +16,11 @@ def update_intcodes(intcodes):
     An Intcode Program is a list of comma-separated integers, like [1,0,0,3,99].
     To run one:
     Step 1:  Look at integer at index 0 to find the "opcode". If opcode is... 
-        1 = Add integer at indices 1 & 2 and store the result at the index                    denoted by integer at index 3
+        1 = Add integer at indices 1 & 2 and store the result at the index denoted by integer at index 3
         2 = Same as opcode1 but multiply the integers instead
         99 = End program
         Unknown code = Something went wrong! 
-    Step 2: Move to the next sequence by stepping forward 4 positions (so if you         previously started at Index0, you should start the next sequence at Index4)
+    Step 2: Move to the next sequence by stepping forward 4 positions (so if you previously started at Index0, you should start the next sequence at Index4)
     ---
     Examples: 
     1,0,0,0,99 becomes 2,0,0,0,99 (1 + 1 = 2).
