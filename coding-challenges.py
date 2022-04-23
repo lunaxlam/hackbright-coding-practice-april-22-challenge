@@ -30,13 +30,11 @@ def update_intcodes(intcodes):
 
     :return: Updated list of intcodes
     """
-
-    # # Initialize the opcode at the positon 0 index (start at 0)
-    # opcode = 0
     
     try: 
 
         # Do this at every fourth element of the list of intcodes starting at 0
+        # Note: The "i" iterable variable represents the same index as positon 0
 
         for i in range(0, len(intcodes)-1, 4):
     
@@ -68,8 +66,6 @@ def update_intcodes(intcodes):
             else: 
                 print("Something went wrong. Invalid code.")
     
-            # # Update position 0 by incrementing by 4
-            # opcode += 4
                 
         # Return the updated list of intcodes 
         return intcodes
