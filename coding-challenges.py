@@ -31,8 +31,8 @@ def update_intcodes(intcodes):
     :return: Updated list of intcodes
     """
 
-    # Initialize the opcode at the positon 0 index (start at 0)
-    opcode = 0
+    # # Initialize the opcode at the positon 0 index (start at 0)
+    # opcode = 0
     
     try: 
 
@@ -41,26 +41,26 @@ def update_intcodes(intcodes):
         for i in range(0, len(intcodes)-1, 4):
     
             # Get the value at the position 0 + 1 index
-            num1_index = intcodes[opcode+1]
+            num1_index = intcodes[i+1]
 
             # Get the value at the position 0 + 2 index
-            num2_index = intcodes[opcode+2]
+            num2_index = intcodes[i+2]
 
             # Get the index to update based on the value at the position 0 + 3 index
-            update_index = intcodes[opcode+3]
+            update_index = intcodes[i+3]
     
             # Add if value at position 0 index == 1
-            if intcodes[opcode] == 1:
+            if intcodes[i] == 1:
                 sum = intcodes[num1_index] + intcodes[num2_index]
                 intcodes[update_index] = sum
     
             # Multiply if value at position 0 index == 2
-            elif intcodes[opcode] == 2:
+            elif intcodes[i] == 2:
                 product = intcodes[num1_index] * intcodes[num2_index]  
                 intcodes[update_index] = product
     
             # Print terminated message if value at positon 0 index == 99 
-            elif intcodes[opcode] == 99:
+            elif intcodes[i] == 99:
                 print("Program terminated.")
                 break
     
@@ -68,8 +68,8 @@ def update_intcodes(intcodes):
             else: 
                 print("Something went wrong. Invalid code.")
     
-            # Update position 0 by incrementing by 4
-            opcode += 4
+            # # Update position 0 by incrementing by 4
+            # opcode += 4
                 
         # Return the updated list of intcodes 
         return intcodes
